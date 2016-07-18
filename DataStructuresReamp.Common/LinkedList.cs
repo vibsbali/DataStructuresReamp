@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace DataStructuresReamp.Common
 {
-    public class LinkedList<T> : ICollection<T> 
+    public class LinkedList<T> : ICollection<T>
         where T : IComparable<T>
     {
         private Node<T> head;
@@ -46,11 +46,26 @@ namespace DataStructuresReamp.Common
             throw new NotImplementedException();
         }
 
+        public bool RemoveFirst()
+        {
+            if (head != null)
+            {
+                head = head.Next;
+                Count--;
+                if (head == null)
+                {
+                    tail = null;
+                }
+            }
+
+            return false;
+        }
+
         public bool Remove(T item)
         {
             throw new NotImplementedException();
         }
-        
+
         public IEnumerator<T> GetEnumerator()
         {
             throw new NotImplementedException();
