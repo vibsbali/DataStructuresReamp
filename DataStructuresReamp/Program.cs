@@ -1,5 +1,5 @@
 ﻿using System;
-using DataStructuresReamp.Common;
+using DataStructuresReamp.LinkedList;
 
 namespace DataStructuresReamp
 {

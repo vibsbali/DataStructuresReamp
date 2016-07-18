@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace DataStructuresReamp.Common
+namespace DataStructuresReamp.LinkedList
 {
     public class LinkedList<T> : ICollection<T>
         where T : IComparable<T>

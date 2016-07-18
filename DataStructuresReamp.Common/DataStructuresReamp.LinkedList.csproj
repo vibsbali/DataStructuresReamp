@@ -7,8 +7,8 @@
     <ProjectGuid>{847CF426-7A11-4A01-A304-E3632E337966}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataStructuresReamp.Common</RootNamespace>
-    <AssemblyName>DataStructuresReamp.Common</AssemblyName>
+    <RootNamespace>DataStructuresReamp.LinkedList</RootNamespace>
+    <AssemblyName>DataStructuresReamp.LinkedList</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

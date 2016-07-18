@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataStructuresReamp.Common\DataStructuresReamp.Common.csproj">
+    <ProjectReference Include="..\DataStructuresReamp.Common\DataStructuresReamp.LinkedList.csproj">
       <Project>{847cf426-7a11-4a01-a304-e3632e337966}</Project>
-      <Name>DataStructuresReamp.Common</Name>
+      <Name>DataStructuresReamp.LinkedList</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

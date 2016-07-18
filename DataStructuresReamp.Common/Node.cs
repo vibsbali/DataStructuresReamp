@@ -1,4 +1,4 @@
-﻿namespace DataStructuresReamp.Common
+﻿namespace DataStructuresReamp.LinkedList
 {
     internal class Node<T>
     {
