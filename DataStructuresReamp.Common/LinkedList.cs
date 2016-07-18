@@ -33,12 +33,21 @@ namespace DataStructuresReamp.Common
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            head = tail = null;
+            Count = 0;
         }
 
         public bool Contains(T item)
         {
-            throw new NotImplementedException();
+            foreach (var node in this)
+            {
+                if (node.CompareTo(item) == 0)
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public void CopyTo(T[] array, int arrayIndex)
@@ -61,14 +70,91 @@ namespace DataStructuresReamp.Common
             return false;
         }
 
-        public bool Remove(T item)
+        public bool RemoveLast()
         {
-            throw new NotImplementedException();
+            if (tail == null)
+            {
+                return false;
+            }
+
+            var node = head;
+            if (head == tail)
+            {
+                head = null;
+                tail = null;
+                Count--;
+                return true;
+            }
+
+            while (node.Next.Next != null)
+            {
+                node = node.Next;
+            }
+            node.Next = null;
+            tail = node;
+            Count--;
+            return true;
+        }
+
+        public bool Remove(T value)
+        {
+            if (head == null)
+            {
+                return false;
+            }
+
+            if (head == tail && head.Value.CompareTo(value) == 0)
+            {
+                head = tail = null;
+                Count--;
+                return true;
+            }
+
+            Node<T> previous = null;
+            var current = head;
+
+            while (current.Next != null && current.Value.CompareTo(value) != 0)
+            {
+                previous = current;
+                current = current.Next;
+            }
+
+            if (current.Value.CompareTo(value) == 0)
+            {
+                //Is it head
+                if (previous == null)
+                {
+                    head = head.Next;
+                    Count--;
+                    return true;
+                }
+                
+                previous.Next = current.Next;
+                Count--;
+
+                //Is it tail
+                if (current.Next == null)
+                {
+                    tail = previous;
+                }
+                return true;
+            }
+
+            return false;
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            Node<T> previous = null;
+            var node = head;
+            while (node != null)
+            {
+                yield return node.Value;
+                previous = node;
+                node = node.Next;
+            }
+
+            //Notice how you can return previous node here
         }
 
         IEnumerator IEnumerable.GetEnumerator()

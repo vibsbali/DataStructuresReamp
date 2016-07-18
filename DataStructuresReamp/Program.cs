@@ -1,19 +1,19 @@
-﻿using DataStructuresReamp.Common;
+﻿using System;
+using DataStructuresReamp.Common;
 
 namespace DataStructuresReamp
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var list = new LinkedList<int> {1, 2, 3};
+            var list = new LinkedList<int> {1};
 
-            for (int i = 0; i < 3; i++)
-            {
-                list.Remove(1);
-            }
-
-
+            //list.Remove(4);
+            //list.RemoveLast();
+            //list.Remove(2);
+            Console.WriteLine(list.Contains(1));
+            Console.WriteLine(list.Contains(0));
         }
     }
 }
