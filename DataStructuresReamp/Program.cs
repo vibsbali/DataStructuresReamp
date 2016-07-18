@@ -1,5 +1,5 @@
 ﻿using System;
-using DataStructuresReamp.LinkedList;
+using DataStructuresReamp.DoublyLinkedList;
 
 namespace DataStructuresReamp
 {
@@ -7,13 +7,24 @@ namespace DataStructuresReamp
     {
         static void Main()
         {
-            var list = new LinkedList<int> {1};
+            var list = new DoublyLinkedList<int>();
 
-            //list.Remove(4);
-            //list.RemoveLast();
-            //list.Remove(2);
-            Console.WriteLine(list.Contains(1));
-            Console.WriteLine(list.Contains(0));
+            for (int i = 0; i < 10; i++)
+            {
+                list.AddLast(i);
+            }
+
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
+
+            list.Remove(10);
+
+            foreach (var i in list)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
