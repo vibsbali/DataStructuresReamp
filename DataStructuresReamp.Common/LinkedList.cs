@@ -52,7 +52,13 @@ namespace DataStructuresReamp.Common
 
         public void CopyTo(T[] array, int arrayIndex)
         {
-            throw new NotImplementedException();
+            var current = head;
+            while (current != null)
+            {
+                array[arrayIndex] = current.Value;
+                arrayIndex++;
+                current = current.Next;
+            }
         }
 
         public bool RemoveFirst()
