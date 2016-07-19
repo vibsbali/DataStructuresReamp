@@ -1,5 +1,5 @@
 ﻿using System;
-using DataStructuresReamp.DoublyLinkedList;
+using DataStructuresReamp.BinarySearchTree;
 
 namespace DataStructuresReamp
 {
@@ -7,24 +7,29 @@ namespace DataStructuresReamp
     {
         static void Main()
         {
-            var list = new DoublyLinkedList<int>();
+            var bst = new BinarySearchTree<int>();
 
-            for (int i = 0; i < 10; i++)
-            {
-                list.AddLast(i);
-            }
+           bst.Add(100);
+            bst.Add(50);
+            bst.Add(150);
+            bst.Add(45);
+            bst.Add(125);
+            bst.Add(175);
+            bst.Add(47);
+            bst.Add(48);
+            bst.Add(46);
+            bst.Add(165);
+            bst.Add(155);
+            bst.Add(152);
+            bst.Add(190);
+            bst.Add(2000);
+            bst.Add(180);
+            bst.Add(176);
 
-            foreach (var i in list)
-            {
-                Console.WriteLine(i);
-            }
 
-            list.Remove(10);
+            bst.Remove(175);
 
-            foreach (var i in list)
-            {
-                Console.WriteLine(i);
-            }
+            bst.BreadthFirstSearch();
         }
     }
 }

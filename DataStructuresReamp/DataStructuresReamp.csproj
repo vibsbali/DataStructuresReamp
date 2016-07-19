@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataStructuresReamp.DoublyLinkedList\DataStructuresReamp.DoublyLinkedList.csproj">
-      <Project>{41c95329-0450-4044-99e7-bee891bca964}</Project>
-      <Name>DataStructuresReamp.DoublyLinkedList</Name>
+    <ProjectReference Include="..\DataStructuresReamp.BinarySearchTree\DataStructuresReamp.BinarySearchTree.csproj">
+      <Project>{a03b2afd-024e-40c6-9ce9-704d975e04fe}</Project>
+      <Name>DataStructuresReamp.BinarySearchTree</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
