@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresReamp.LinkedL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresReamp.DoublyLinkedList", "DataStructuresReamp.DoublyLinkedList\DataStructuresReamp.DoublyLinkedList.csproj", "{41C95329-0450-4044-99E7-BEE891BCA964}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresReamp.BinarySearchTree", "DataStructuresReamp.BinarySearchTree\DataStructuresReamp.BinarySearchTree.csproj", "{A03B2AFD-024E-40C6-9CE9-704D975E04FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{41C95329-0450-4044-99E7-BEE891BCA964}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41C95329-0450-4044-99E7-BEE891BCA964}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41C95329-0450-4044-99E7-BEE891BCA964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A03B2AFD-024E-40C6-9CE9-704D975E04FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A03B2AFD-024E-40C6-9CE9-704D975E04FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A03B2AFD-024E-40C6-9CE9-704D975E04FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A03B2AFD-024E-40C6-9CE9-704D975E04FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
