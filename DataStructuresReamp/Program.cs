@@ -27,9 +27,8 @@ namespace DataStructuresReamp
             bst.Add(176);
 
 
-            bst.Remove(175);
-
-            bst.BreadthFirstSearch();
+            Console.WriteLine(bst.Contains(2));
+            Console.WriteLine(bst.Contains(190));
         }
     }
 }

@@ -1,9 +1,12 @@
 ﻿using System;
+using System.CodeDom;
+using System.Collections;
 using System.Collections.Generic;
 
-namespace DataStructuresReamp.BinarySearchTree
+namespace DataStructuresReamp.BinarySearchTree 
 {
-    public class BinarySearchTree<T> where T : IComparable<T>
+    public class BinarySearchTree<T> : IEnumerable<T>
+        where T : IComparable<T>
     {
         private Node<T> head;
         public int Count { get; private set; }
@@ -55,15 +58,16 @@ namespace DataStructuresReamp.BinarySearchTree
 
 
 
-        public void BreadthFirstSearch()
+        public IEnumerator<T> BreadthFirstSearch()
         {
             var queue = new Queue<Node<T>>();
+            var queueToEnumerate = new Queue<T>();
             queue.Enqueue(head);
 
             while (queue.Count > 0)
             {
                 var node = queue.Dequeue();
-                Console.WriteLine(node.Value);
+                queueToEnumerate.Enqueue(node.Value);
                 if (node.Left != null)
                 {
                     queue.Enqueue(node.Left);
@@ -72,6 +76,12 @@ namespace DataStructuresReamp.BinarySearchTree
                 {
                     queue.Enqueue(node.Right);
                 }
+            }
+
+            while (queueToEnumerate.Count != 0)
+            {
+                var node = queueToEnumerate.Dequeue();
+                yield return node;
             }
         }
 
@@ -254,6 +264,37 @@ namespace DataStructuresReamp.BinarySearchTree
                     AddRecursively(node.Right, value);
                 }
             }
+        }
+
+        public bool Contains(T value)
+        {
+            var current = head;
+            while(current != null)
+            {
+                if (current.Value.CompareTo(value) > 0)
+                {
+                    current = current.Left;
+                }
+                else if(current.Value.CompareTo(value) < 0)
+                {
+                    current = current.Right;
+                }
+                else if(current.Value.CompareTo(value) == 0)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return BreadthFirstSearch();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
 }
