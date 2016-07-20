@@ -1,5 +1,6 @@
-﻿using System;
-using DataStructuresReamp.BinarySearchTree;
+﻿using ArrayList;
+using System;
+
 
 namespace DataStructuresReamp
 {
@@ -7,28 +8,31 @@ namespace DataStructuresReamp
     {
         static void Main()
         {
-            var bst = new BinarySearchTree<int>();
+            var array = new ArrayList<int>(2);
+            array.Add(1);
+            array.Add(2);
+            array.Add(3);
 
-           bst.Add(100);
-            bst.Add(50);
-            bst.Add(150);
-            bst.Add(45);
-            bst.Add(125);
-            bst.Add(175);
-            bst.Add(47);
-            bst.Add(48);
-            bst.Add(46);
-            bst.Add(165);
-            bst.Add(155);
-            bst.Add(152);
-            bst.Add(190);
-            bst.Add(2000);
-            bst.Add(180);
-            bst.Add(176);
+            array.Remove(3);
 
+            foreach (var i in array)
+            {
+                Console.WriteLine(i);
+            }
 
-            Console.WriteLine(bst.Contains(2));
-            Console.WriteLine(bst.Contains(190));
+            array.Add(2);
+
+            foreach (var i in array)
+            {
+                Console.WriteLine(i);
+            }
+
+            array.Remove(1);
+
+            foreach (var i in array)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
