@@ -1,5 +1,5 @@
-﻿using ArrayList;
-using System;
+﻿using System;
+using DataStructuresReamp.StacksAndQueues;
 
 
 namespace DataStructuresReamp
@@ -8,30 +8,28 @@ namespace DataStructuresReamp
     {
         static void Main()
         {
-            var array = new ArrayList<int>(2);
-            array.Add(1);
-            array.Add(2);
-            array.Add(3);
+            var stack = new Stack<string>();
 
-            array.Remove(3);
-
-            foreach (var i in array)
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine(i);
+                stack.Push(i.ToString());
             }
 
-            array.Add(2);
-
-            foreach (var i in array)
+            var length = stack.Count;
+            for (int i = 0; i < length; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(stack.Pop());
             }
 
-            array.Remove(1);
-
-            foreach (var i in array)
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine(i);
+                stack.Push(i.ToString());
+            }
+
+            length = stack.Count;
+            for (int i = 0; i < length; i++)
+            {
+                Console.WriteLine(stack.Pop());
             }
         }
     }
