@@ -66,5 +66,74 @@ namespace DataStructuresReamp.Sorts
             array[a1] = array[a2];
             array[a2] = temp;
         }
+
+
+        public void MergeSort(T[] array)
+        {
+            SplitRecursively(array);
+        }
+
+        private void SplitRecursively(T[] array)
+        {
+            if (array.Length <= 1)
+            {
+                return;
+            }
+
+            var mid = array.Length / 2;
+            var leftArray = new T[mid];
+            Array.Copy(array, 0, leftArray, 0, mid);
+
+            var rightArray = new T[array.Length - mid];
+            Array.Copy(array, mid, rightArray, 0, rightArray.Length);
+
+            //Split recursively
+            SplitRecursively(leftArray);
+            SplitRecursively(rightArray);
+
+            //Now merge Array
+            MergeArray(array, leftArray, rightArray);
+        }
+
+        private void MergeArray(T[] array, T[] leftArray, T[] rightArray)
+        {
+            var startingIndex = 0;
+            var leftIndex = 0;
+            var rightIndex = 0;
+            var remaining = leftArray.Length + rightArray.Length;
+
+            while (remaining > 0)
+            {
+                if (leftIndex >= leftArray.Length)
+                {
+                    array[startingIndex] = rightArray[rightIndex];
+                    startingIndex++;
+                    rightIndex++;
+                }
+                else if (rightIndex >= rightArray.Length)
+                {
+                    array[startingIndex] = leftArray[leftIndex];
+                    startingIndex++;
+                    leftIndex++;
+                }
+                else
+                {
+                    if (leftArray[leftIndex].CompareTo(rightArray[rightIndex]) < 0)
+                    {
+                        array[startingIndex] = leftArray[leftIndex];
+                        startingIndex++;
+                        leftIndex++;
+                    }
+                    else
+                    {
+                        array[startingIndex] = rightArray[leftIndex];
+                        startingIndex++;
+                        rightIndex++;
+                    }
+                }
+
+                remaining--;
+            }
+        }
     }
 }
