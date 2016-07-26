@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresReamp.StacksA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresReamp.Sets", "DataStructuresReamp.Sets\DataStructuresReamp.Sets.csproj", "{93042375-8DF4-4664-B761-C7B811E470B3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresReamp.Sorts", "DataStructuresReamp.Sorts\DataStructuresReamp.Sorts.csproj", "{AF295AD1-1573-43C3-855E-3090D168CC29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{93042375-8DF4-4664-B761-C7B811E470B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93042375-8DF4-4664-B761-C7B811E470B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93042375-8DF4-4664-B761-C7B811E470B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF295AD1-1573-43C3-855E-3090D168CC29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF295AD1-1573-43C3-855E-3090D168CC29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF295AD1-1573-43C3-855E-3090D168CC29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF295AD1-1573-43C3-855E-3090D168CC29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

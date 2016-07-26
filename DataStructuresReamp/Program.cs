@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Globalization;
+using DataStructuresReamp.Sorts;
 using DataStructuresReamp.StacksAndQueues;
 
 
@@ -8,28 +10,13 @@ namespace DataStructuresReamp
     {
         static void Main()
         {
-            var stack = new Stack<string>();
+            var sort = new Sort<int>();
+            var array = new int[] {3, 23, 1, 3, 11, 4, 23, 3, 12, 3, 123, 123,123,13,123,11, 213, 2,};
+            sort.BubbleSort(array);
 
-            for (int i = 0; i < 5; i++)
+            foreach (var i in array)
             {
-                stack.Push(i.ToString());
-            }
-
-            var length = stack.Count;
-            for (int i = 0; i < length; i++)
-            {
-                Console.WriteLine(stack.Pop());
-            }
-
-            for (int i = 0; i < 5; i++)
-            {
-                stack.Push(i.ToString());
-            }
-
-            length = stack.Count;
-            for (int i = 0; i < length; i++)
-            {
-                Console.WriteLine(stack.Pop());
+                Console.WriteLine(i);
             }
         }
     }
